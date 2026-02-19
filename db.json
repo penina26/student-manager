@@ -17,14 +17,6 @@
       "fee": 6000
     },
     {
-      "id": "ba7b",
-      "name": "Data Science",
-      "description": "This course introduces the core concepts and practical tools used in Data Science. Topics include data collection and preprocessing, exploratory data analysis (EDA), statistical reasoning, data visualization, predictive modeling, and machine learning fundamentals. Students gain hands-on experience using Python (NumPy, pandas, Matplotlib/Seaborn, scikit-learn) to build data pipelines, evaluate models, and communicate insights through reports and dashboards.",
-      "code": "DS5",
-      "duration": "18",
-      "fee": 200000
-    },
-    {
       "id": "3122",
       "name": "Business Administration",
       "description": "Business Administration focuses on planning, organizing, and managing business operations such as finance, marketing, human resources, and strategy to help organizations run efficiently and grow.",
@@ -55,6 +47,14 @@
       "code": "CE",
       "duration": "60",
       "fee": 2000000
+    },
+    {
+      "id": "897b",
+      "name": "React Native",
+      "description": "tesrtt",
+      "code": "RN",
+      "duration": "7",
+      "fee": 700000
     }
   ],
   "students": [
@@ -97,14 +97,6 @@
       "regNo": "IT/2000/2014",
       "year": 2014,
       "courseCode": "DS5"
-    },
-    {
-      "name": "Amina Ali",
-      "email": "ali@gmail.com",
-      "regNo": "TRS/300/2011",
-      "year": 2010,
-      "courseCode": "DS5",
-      "id": "1ccc"
     }
   ]
 }
