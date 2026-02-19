@@ -17,7 +17,7 @@ function EditCourse() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch(`http://localhost:3001/courses/${id}`)
+        fetch(`${API_BASE}/courses/${id}`)
             .then((res) => {
                 if (!res.ok) throw new Error("Not found");
                 return res.json();
@@ -60,7 +60,7 @@ function EditCourse() {
         const cleanedCode = form.code.trim().toUpperCase();
 
         // robust duplicate check (fetch all + compare cleaned)
-        const all = await fetch("http://localhost:3001/courses").then((r) => r.json());
+        const all = await fetch(`${API_BASE}/courses`).then((r) => r.json());
 
         const exists = all.some(
             (c) => String(c.code ?? "").trim().toUpperCase() === cleanedCode
@@ -79,7 +79,7 @@ function EditCourse() {
             fee: Number(form.fee),
         };
 
-        fetch(`http://localhost:3001/courses/${id}`, {
+        fetch(`${API_BASE}/courses/${id}`, {
             method: "PATCH",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload),

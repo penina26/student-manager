@@ -89,6 +89,14 @@
       "regNo": "IT/2000/2014",
       "year": 2014,
       "courseCode": "DS5"
+    },
+    {
+      "name": "Amina Ali",
+      "email": "ali@gmail.com",
+      "regNo": "TRS/300/2011",
+      "year": 2010,
+      "courseCode": "DS5",
+      "id": "1ccc"
     }
   ]
 }

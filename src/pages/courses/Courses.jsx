@@ -8,7 +8,7 @@ function Courses() {
     const [q, setQ] = useState("");
 
     useEffect(() => {
-        fetch("http://localhost:3001/courses")
+        fetch(`${API_BASE}/courses`)
             .then((r) => r.json())
             .then(setCourses)
             .catch(() => toast.error("Failed to load courses"));
@@ -32,7 +32,7 @@ function Courses() {
     );
 
     function deleteCourse(id) {
-        return fetch(`http://localhost:3001/courses/${id}`, { method: "DELETE" }).then((res) => {
+        return fetch(`${API_BASE}/courses/${id}`, { method: "DELETE" }).then((res) => {
             if (!res.ok) throw new Error("Delete failed");
             setCourses((prev) => prev.filter((c) => c.id !== id));
         });

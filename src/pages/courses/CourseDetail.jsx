@@ -8,7 +8,7 @@ function CourseDetail() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch(`http://localhost:3001/courses/${id}`)
+        fetch(`${API_BASE}/courses/${id}`)
             .then((res) => {
                 if (!res.ok) throw new Error("Not found");
                 return res.json();

@@ -21,11 +21,11 @@ function StudentDetail() {
         setLoading(true);
 
         Promise.all([
-            fetch(`http://localhost:3001/students/${id}`).then((r) => {
+            fetch(`${API_BASE}/students/${id}`).then((r) => {
                 if (!r.ok) throw new Error("Student not found");
                 return r.json();
             }),
-            fetch("http://localhost:3001/courses").then((r) => r.json()),
+            fetch(`${API_BASE}/courses`).then((r) => r.json()),
         ])
             .then(([studentData, courseData]) => {
                 setStudent(studentData);

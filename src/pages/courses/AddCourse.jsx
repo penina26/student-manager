@@ -38,7 +38,7 @@ function AddCourse() {
     const cleanedCode = form.code.trim().toUpperCase();
 
     // robust duplicate check (fetch all + compare cleaned)
-    const all = await fetch("http://localhost:3001/courses").then((r) => r.json());
+    const all = await fetch(`${API_BASE}/courses`).then((r) => r.json());
 
     const exists = all.some(
       (c) => String(c.code ?? "").trim().toUpperCase() === cleanedCode
@@ -57,7 +57,7 @@ function AddCourse() {
       fee: Number(form.fee),
     };
 
-    fetch("http://localhost:3001/courses", {
+    fetch(`${API_BASE}/courses`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),

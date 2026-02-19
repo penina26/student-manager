@@ -9,17 +9,21 @@
     "server": "json-server --watch db.json --port 3001",
     "dev:all": "concurrently \"npm run server\" \"npm run dev\"",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "node server.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.2.0",
+    "@netlify/blobs": "^10.7.0",
     "axios": "^1.13.5",
     "bootstrap": "^5.3.8",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-hot-toast": "^2.6.0",
     "react-router-dom": "^7.13.0",
-    "sweetalert2": "^11.26.18"
+    "sweetalert2": "^11.26.18",
+    "cors": "^2.8.5",
+    "json-server": "^0.17.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

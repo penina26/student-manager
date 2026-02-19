@@ -21,11 +21,11 @@ function EditStudent() {
         setLoading(true);
 
         Promise.all([
-            fetch(`http://localhost:3001/students/${id}`).then((r) => {
+            fetch(`${API_BASE}/students/${id}`).then((r) => {
                 if (!r.ok) throw new Error("Student not found");
                 return r.json();
             }),
-            fetch("http://localhost:3001/courses").then((r) => r.json()),
+            fetch(`${API_BASE}/courses`).then((r) => r.json()),
         ])
             .then(([studentData, courseData]) => {
                 setCourses(courseData);
@@ -65,7 +65,7 @@ function EditStudent() {
         const cleanedReg = form.regNo.trim().toUpperCase();
 
         // get all students and compare locally (robust)
-        const all = await fetch("http://localhost:3001/students").then((r) => r.json());
+        const all = await fetch(`${API_BASE}/students`).then((r) => r.json());
 
         const takenByOther = all.some(
             (s) =>
@@ -87,7 +87,7 @@ function EditStudent() {
             year: Number(form.year),
         };
 
-        fetch(`http://localhost:3001/students/${id}`, {
+        fetch(`${API_BASE}/students/${id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload),

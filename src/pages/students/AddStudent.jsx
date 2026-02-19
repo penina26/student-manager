@@ -20,7 +20,7 @@ function AddStudent() {
     useEffect(() => {
         setLoadingCourses(true);
 
-        fetch("http://localhost:3001/courses")
+        fetch(`${API_BASE}/courses`)
             .then((res) => {
                 if (!res.ok) throw new Error("Failed to load courses");
                 return res.json();
@@ -54,7 +54,7 @@ function AddStudent() {
         const cleanedReg = form.regNo.trim().toUpperCase();
 
         // duplicate check
-        const all = await fetch("http://localhost:3001/students").then((r) => r.json());
+        const all = await fetch("`${API_BASE}/students`").then((r) => r.json());
 
         const exists = all.some(
             (s) => String(s.regNo ?? "").trim().toUpperCase() === cleanedReg
@@ -73,15 +73,15 @@ function AddStudent() {
             courseCode: courseCode.trim().toUpperCase(),
         };
 
-        fetch("http://localhost:3001/students", {
+        fetch(`${API_BASE}/students`), {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload),
         })
             .then((res) => {
-                if (!res.ok) throw new Error("Failed to add student");
-                return res.json();
-            })
+            if (!res.ok) throw new Error("Failed to add student");
+            return res.json();
+        })
             .then(() => {
                 toast.success("Student added!");
                 navigate("/students");
