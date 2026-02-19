@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
+import { API_BASE } from "../../config";
 
 function AddCourse() {
   const navigate = useNavigate();

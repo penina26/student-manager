@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useParams } from "react-router-dom";
+import { API_BASE } from "../../config";
 
 function CourseDetail() {
     const { id } = useParams();

@@ -1,6 +1,8 @@
 import React, { useEffect, useMemo, useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
+import { API_BASE } from "../../config";
+
 
 function AddStudent() {
     const navigate = useNavigate();
@@ -54,7 +56,7 @@ function AddStudent() {
         const cleanedReg = form.regNo.trim().toUpperCase();
 
         // duplicate check
-        const all = await fetch("`${API_BASE}/students`").then((r) => r.json());
+        const all = await fetch(`${API_BASE}/students`).then((r) => r.json());
 
         const exists = all.some(
             (s) => String(s.regNo ?? "").trim().toUpperCase() === cleanedReg
@@ -73,15 +75,15 @@ function AddStudent() {
             courseCode: courseCode.trim().toUpperCase(),
         };
 
-        fetch(`${API_BASE}/students`), {
+        fetch(`${API_BASE}/students`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload),
         })
             .then((res) => {
-            if (!res.ok) throw new Error("Failed to add student");
-            return res.json();
-        })
+                if (!res.ok) throw new Error("Failed to add student");
+                return res.json();
+            })
             .then(() => {
                 toast.success("Student added!");
                 navigate("/students");

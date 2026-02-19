@@ -6,7 +6,7 @@
       "description": "Learn React from basics",
       "code": "CS6",
       "duration": "3 Months",
-      "fee": 500
+      "fee": 90000
     },
     {
       "id": "5b53",
@@ -47,6 +47,14 @@
       "code": "LLB",
       "duration": "25",
       "fee": 500000
+    },
+    {
+      "id": "dbcb",
+      "name": "Chemical Enginering",
+      "description": "Chemical Engineering is a course that teaches how to design and improve processes that convert raw materials into useful products such as fuels, medicines, plastics, and food. It combines chemistry, physics, mathematics, and engineering to solve real-world industrial and environmental problems",
+      "code": "CE",
+      "duration": "60",
+      "fee": 2000000
     }
   ],
   "students": [

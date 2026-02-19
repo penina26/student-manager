@@ -2,13 +2,15 @@ import React, { useEffect, useMemo, useState } from "react";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 import StudentRow from "../../components/StudentRow";
+import { API_BASE } from "../../config";
+
 
 function Students() {
     const [students, setStudents] = useState([]);
     const [q, setQ] = useState("");
 
     useEffect(() => {
-        fetch("http://localhost:3001/students")
+        fetch(`${API_BASE}/students`)
             .then((res) => res.json())
             .then(setStudents)
             .catch(() => toast.error("Failed to load students"));
@@ -42,7 +44,7 @@ function Students() {
 
     // Actual delete request (called after user confirms)
     function deleteStudent(id) {
-        return fetch(`http://localhost:3001/students/${id}`, { method: "DELETE" }).then((res) => {
+        return fetch(`${API_BASE}/students/${id}`, { method: "DELETE" }).then((res) => {
             if (!res.ok) throw new Error("Delete failed");
             setStudents((prev) => prev.filter((s) => s.id !== id));
         });

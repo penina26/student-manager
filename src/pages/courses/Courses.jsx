@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 import CourseRow from "../../components/CourseRow";
+import { API_BASE } from "../../config";
 
 function Courses() {
     const [courses, setCourses] = useState([]);
