@@ -81,7 +81,7 @@ SCMS provides a platform for managing student and course registrations and enabl
   "year": 1,
   "courseCode": "CS6"
 }
-
+```
 ### Course
 ```
 {
@@ -146,9 +146,9 @@ npm run dev
 
 * `/add-student -> create`
 
-* /students/:id -> detail
+* `/students/:id -> detail`
 
-* /students/:id/edit -> edit
+* `/students/:id/edit -> edit`
 
 Courses
 
@@ -158,7 +158,7 @@ Courses
 
 * `/courses/:id -> detail`
 
-* `/courses/:id/edit ` edit`
+* `/courses/:id/edit `
 
 ### Notes
 
