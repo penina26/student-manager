@@ -62,11 +62,6 @@ function EditStudent() {
             return;
         }
 
-        const cleanedReg = form.regNo.trim().toUpperCase();
-
-        // get all students and compare locally (robust)
-        const all = await fetch(`${API_BASE}/students`).then((r) => r.json());
-
         const takenByOther = all.some(
             (s) =>
                 String(s.id) !== String(id) &&

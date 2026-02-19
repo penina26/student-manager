@@ -59,17 +59,21 @@ function EditCourse() {
 
         const cleanedCode = form.code.trim().toUpperCase();
 
-        // robust duplicate check (fetch all + compare cleaned)
+        // fetch all courses once
         const all = await fetch(`${API_BASE}/courses`).then((r) => r.json());
 
+        // exclude the current course (same id) from the duplicate check
         const exists = all.some(
-            (c) => String(c.code ?? "").trim().toUpperCase() === cleanedCode
+            (c) =>
+                String(c.id) !== String(id) &&
+                String(c.code ?? "").trim().toUpperCase() === cleanedCode
         );
 
         if (exists) {
             toast.error("That course code already exists.");
             return;
         }
+
 
         const payload = {
             name: form.name.trim(),
