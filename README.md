@@ -168,7 +168,7 @@ Student regNo is saved in uppercase and duplicates are blocked.
 
 Course code is saved in uppercase and duplicates are blocked.
 
-Future Plans
+### Future Plans
 
 Use a commercial database (e.g., PostgreSQL/MySQL)
 
