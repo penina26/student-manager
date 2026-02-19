@@ -1,5 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+
+//Bootstrap styling
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+//Fontawsome icons
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
 import './index.css'
 import App from './App.jsx'
 

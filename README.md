@@ -1,16 +1,180 @@
-# React + Vite
+# Student Course Management System (SCMS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple **Student Course Management System** built with **React** and a **JSON Server** backend.  
+SCMS helps manage **students**, **courses**, and basic enrollment linking using **courseCode**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Authors
+- Penina Wanyama  
+- Samuel Wanjau  
+- Sharon Ouko  
+- Sylvana Wanjiru  
+- Robert Mmasi  
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Introduction
+A Student Course Management System (SCMS) is a software application designed to manage student information, course details, enrollments, and academic records efficiently.  
+It helps administrators manage students and courses, while students can view enrolled courses and results.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Problem Statement
+Many academic institutions struggle with managing student and course data due to manual processing. This leads to:
+- Lost information
+- Data duplication
+- Inconsistencies in records
+
+---
+
+## Solution
+SCMS provides a platform for managing student and course registrations and enables easy access to consistent and complete information.
+
+---
+
+## Objectives
+- Maintain student records  
+- Manage course details  
+- Handle course enrollment (via course codes)  
+- Reduce manual paperwork  
+
+---
+
+## Features
+### Students
+- Add student
+- View all students
+- View student detail
+- Edit student
+- Delete student
+- Prevent duplicate **registration numbers (regNo)**
+
+### Courses
+- Add course
+- View all courses
+- View course detail
+- Edit course
+- Delete course
+- Prevent duplicate **course codes (code)**
+
+---
+
+## Technologies Used
+- **React** (Frontend UI)
+- **React Router DOM** (Routing)
+- **Bootstrap 5** (Styling/layout)
+- **Font Awesome** (Icons)
+- **react-hot-toast** (Alerts/toasts)
+- **JSON Server** (Mock REST API)
+
+---
+
+## Data Model
+### Student
+```json
+{
+  "id": "1",
+  "name": "Amina Ali",
+  "email": "amina@email.com",
+  "regNo": "DS/001/2026",
+  "year": 1,
+  "courseCode": "CS6"
+}
+
+### Student
+
+```json
+{
+  "id": "1",
+  "name": "React JS",
+  "description": "Learn React from basics",
+  "code": "CS6",
+  "duration": "3 Months",
+  "fee": 500
+}
+
+## Project Scope
+- Create registration forms for students and courses
+
+- Read student and course information
+
+- Update existing records
+
+- Delete student or course information
+
+- Deploy to a web hosting service
+
+## Folder Structure (high level)
+
+``` json
+src/
+  components/
+  pages/
+    students/
+    courses/
+  App.jsx
+  main.jsx
+db.json
+
+## Getting Started
+
+### 1) Clone the repo
+git clone <your-repo-url>
+cd <your-project-folder>
+
+### 2) Install dependencies
+```
+npm install
+```
+
+### 3) Start JSON Server (backend)
+```
+npx json-server --watch data/db.json --port 3001
+```
+### 4) Start React app (frontend)
+```
+npm run dev
+```
+* Your app will run on something like:
+http://localhost:5173
+
+### Routes
+*Students*
+
+* `/students -> list`
+
+* `/add-student -> create`
+
+* /students/:id -> detail
+
+* /students/:id/edit -> edit
+
+Courses
+
+* `/courses -> list`
+
+* `/add-course -> create`
+
+* `/courses/:id -> detail`
+
+* `/courses/:id/edit ` edit`
+
+### Notes
+
+Student enrollment uses courseCode, so course codes should be unique.
+
+Student regNo is saved in uppercase and duplicates are blocked.
+
+Course code is saved in uppercase and duplicates are blocked.
+
+Future Plans
+
+Use a commercial database (e.g., PostgreSQL/MySQL)
+
+Add a real backend API (Node/Express or Django REST Framework)
+
+Track student performance and results
+
+Improve authentication/roles (Admin/Student)
+
