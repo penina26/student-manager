@@ -81,6 +81,14 @@
       "regNo": "PSC/200/2010",
       "year": 2010,
       "courseCode": "PSC"
+    },
+    {
+      "id": "c5ae",
+      "name": "Walter Nyasinga",
+      "email": "nyasinga@gmail.com",
+      "regNo": "IT/2000/2014",
+      "year": 2014,
+      "courseCode": "DS5"
     }
   ]
 }

@@ -72,7 +72,7 @@ SCMS provides a platform for managing student and course registrations and enabl
 
 ## Data Model
 ### Student
-```json
+```
 {
   "id": "1",
   "name": "Amina Ali",
@@ -82,9 +82,8 @@ SCMS provides a platform for managing student and course registrations and enabl
   "courseCode": "CS6"
 }
 
-### Student
-
-```json
+### Course
+```
 {
   "id": "1",
   "name": "React JS",
@@ -93,6 +92,7 @@ SCMS provides a platform for managing student and course registrations and enabl
   "duration": "3 Months",
   "fee": 500
 }
+```
 
 ## Project Scope
 - Create registration forms for students and courses
@@ -107,7 +107,7 @@ SCMS provides a platform for managing student and course registrations and enabl
 
 ## Folder Structure (high level)
 
-``` json
+``` 
 src/
   components/
   pages/
@@ -116,7 +116,7 @@ src/
   App.jsx
   main.jsx
 db.json
-
+```
 ## Getting Started
 
 ### 1) Clone the repo
@@ -137,7 +137,7 @@ npx json-server --watch data/db.json --port 3001
 npm run dev
 ```
 * Your app will run on something like:
-http://localhost:5173
+`http://localhost:5173`
 
 ### Routes
 *Students*
