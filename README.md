@@ -31,6 +31,8 @@ Many academic institutions struggle with managing student and course data due to
 ## Solution
 SCMS provides a platform for managing student and course registrations and enables easy access to consistent and complete information.
 
+You can view the live link here: https://studentrecmanager.netlify.app/
+
 ---
 
 ## Objectives
@@ -71,6 +73,8 @@ SCMS provides a platform for managing student and course registrations and enabl
 ---
 
 ## Data Model
+The database db.json is hosted on [railway.com](https://scms-api-production.up.railway.app/)
+The backend repo is hosted here: https://github.com/penina26/scms-api
 ### Student
 ```
 {
@@ -109,7 +113,13 @@ SCMS provides a platform for managing student and course registrations and enabl
 
 ``` 
 src/
+  config.jsx # for holding the base URL
   components/
+    Footer.jsx
+    Layout.jsx
+    Navbar.jsx
+    CourseRow.jsx
+    StudentRow.jsx
   pages/
     students/
     courses/
@@ -120,8 +130,10 @@ db.json
 ## Getting Started
 
 ### 1) Clone the repo
-git clone <your-repo-url>
-cd <your-project-folder>
+```
+git clone https://github.com/penina26/student-manager.git
+cd student-manager.git
+```
 
 ### 2) Install dependencies
 ```

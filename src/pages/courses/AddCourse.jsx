@@ -38,7 +38,7 @@ function AddCourse() {
 
     const cleanedCode = form.code.trim().toUpperCase();
 
-    // robust duplicate check (fetch all + compare cleaned)
+    // duplicate check (fetch all + compare cleaned)
     const all = await fetch(`${API_BASE}/courses`).then((r) => r.json());
 
     const exists = all.some(
