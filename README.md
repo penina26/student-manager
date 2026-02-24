@@ -123,6 +123,8 @@ src/
   pages/
     students/
     courses/
+    Home.jsx
+    About.jsx
   App.jsx
   main.jsx
 db.json
@@ -162,7 +164,7 @@ npm run dev
 
 * `/students/:id/edit -> edit`
 
-Courses
+*Courses*
 
 * `/courses -> list`
 
