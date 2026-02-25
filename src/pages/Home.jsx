@@ -15,7 +15,7 @@ function Home() {
                             </h1>
 
                             <p className="text-secondary mb-4">
-                                Manage students, courses, and registrations efficiently — reduce manual paperwork,
+                                Manage students, courses, and registrations efficiently reduce manual paperwork,
                                 avoid duplicate records, and keep information consistent and easy to access.
                             </p>
 
